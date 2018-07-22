@@ -92,5 +92,8 @@ digraph G {
 
 
 
+### Usage 
+Right click on the file in Eclipse Package Explorer and then click AstToDot under clicy sub-menu.
+
 ### Bugs
 The project is in development and done for learning purpose. There may be bugs. 
