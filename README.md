@@ -1,4 +1,4 @@
-## Clicy
+## Clicy :: AstToDot 
 Clicy is a plugin for Eclipse that generates [dot](https://en.wikipedia.org/wiki/DOT_(graph_description_language)) graph layout of the Java file AST.  Firstly, the Abstract syntax tree is generated and parsed using eclipse JDT(Java Development Tool) and then converted to dot format. A new file in your eclipse folder containg AST in dot format is written. As of now, dot format contains only the basic information about the java code.
 
 ##### Example:
