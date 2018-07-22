@@ -23,7 +23,7 @@ import com.aasis21.app.AstToDot;
  * @author Thomas Kuhn
  *
  */
-public class AstToDotAction implements IObjectActionDelegate {
+public class ClicyAction implements IObjectActionDelegate {
 
 	private ISelection selection;
 
@@ -51,11 +51,17 @@ public class AstToDotAction implements IObjectActionDelegate {
 	}
 	
 	private void createActionExuecutable(String id,ICompilationUnit fileUnit) {
-		if ("com.aasis21.app.ASTAction".equals(id)) {
+		if ("com.aasis21.app.ASTAction".equals(id)){
 			CompilationUnit unit = parse(fileUnit);
-			AstToDot dotfile = new AstToDot();
+			AstToDot dotfile = new AstToDot(fileUnit.getElementName());
 			dotfile.generate(unit);
-		} else {
+		}
+		else if("com.aasis21.app.IFFINDER".equals(id)){
+			CompilationUnit unit = parse(fileUnit);
+			IfFinderVisitor if_finder = new IfFinderVisitor();
+			if_finder.generate(unit);
+		}
+		else {
 			throw new IllegalArgumentException(id);
 		}
 	}

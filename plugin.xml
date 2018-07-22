@@ -8,18 +8,26 @@
             id="com.aasis21.app.objectContribution1"
             objectClass="org.eclipse.jdt.core.ICompilationUnit">
          <menu
-               label="Slink PlugIn App"
+               label="clicy"
                path="additions"
-               id="com.aasis21.plugin.menu1">
+               id="com.aasis21.app.menu1">
             <separator
                   name="group1">
             </separator>
          </menu>
          <action
-               class="com.aasis21.app.AstToDotAction"
-               id="com.aasis21.app.ASTAction"
-               menubarPath="com.aasis21.plugin.menu1/group1"
-               label="AST To DOT"/>
+               class="com.aasis21.app.ClicyAction"
+               id="com.aasis21.app.IFFINDER"
+               menubarPath="com.aasis21.app.menu1/group1"
+               label="Find IF"
+               enablesFor="1">
+         </action>
+         <action
+         	class="com.aasis21.app.ClicyAction"
+            id="com.aasis21.app.ASTAction"
+            menubarPath="com.aasis21.app.menu1/group1"
+            label="AST To DOT">
+         </action>
       </objectContribution>
    </extension>
 
